@@ -28,9 +28,9 @@ const Login: React.FC = () => {
         
         if (error) throw new Error(error.message);
         
-        if (data?.user) {
-          toast.success('Account created! You can now log in.');
-          setIsSignUp(false);
+        if (data?.session) {
+          toast.success('Account created and logged in successfully!');
+          navigate('/');
         }
       } else {
         const { data, error } = await signIn(email, password);
