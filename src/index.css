@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-800;
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 text-neutral-600 hover:bg-primary-50 hover:text-primary-600;
+  }
+  
+  .sidebar-link.active {
+    @apply bg-primary-50 text-primary-600 font-medium;
+  }
+  
+  .card {
+    @apply bg-white p-6 rounded-xl shadow-card transition-all;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-neutral-200 text-neutral-700 hover:bg-neutral-50 active:bg-neutral-100;
+  }
+  
+  .btn-danger {
+    @apply bg-error-500 text-white hover:bg-error-600 active:bg-error-700;
+  }
+  
+  .input {
+    @apply px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200;
+  }
+  
+  .table-cell {
+    @apply px-4 py-3 whitespace-nowrap;
+  }
+  
+  .table-header {
+    @apply table-cell font-semibold text-sm text-neutral-500 uppercase tracking-wider;
+  }
+  
+  .badge {
+    @apply px-2 py-0.5 text-xs font-medium rounded-full;
+  }
+  
+  .badge-success {
+    @apply bg-success-50 text-success-700;
+  }
+  
+  .badge-warning {
+    @apply bg-warning-50 text-warning-700;
+  }
+  
+  .badge-error {
+    @apply bg-error-50 text-error-700;
+  }
+}
